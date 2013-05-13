@@ -13,8 +13,10 @@ angular.module('myApp.controllers', [])
 			console.log('currentUser', $scope.currentUser);
 		});
 
-		$scope.$watch('users', function () {
-			console.log('changed users', $scope.users);
-			$scope.currentUser = null;
+		$scope.$watch('users', function (newVal, oldVal) {
+			console.log('changed users', $scope.users, newVal, '<-', oldVal);
+			if (newVal.length !== oldVal.length) {
+				$scope.currentUser = null;
+			}
 		}, true);
 	});

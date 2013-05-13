@@ -18,9 +18,12 @@ angular.module('myApp.directives', [])
 			restrict: 'E',
 			scope: {
 				localUser: '=userAttr',
-				index: '@indexAttr'
+				index: '@indexAttr',
+				index2: '&indexSecondAttr'
 			},
 			controller: function ($scope) {
+				console.log('user directive controller', $scope, 'index', $scope.index2());
+
 				$scope.getIndex = function (index) {
 					return (index | 0 ) + 1;
 				};
