@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Example 1</title>
+
+  <style>
+  	dl {
+  		overflow: hidden;
+  	}
+  	dt {
+  		float: left;
+  		width: 100px;
+  		clear: both;
+  	}
+  	dd {
+  		float: left;
+  	}
+
+  	.list, .form {
+  		float: left;
+  		width: 50%;
+  	}
+  </style>
+</head>
+<body ng-controller="MainCtrl">
+
+	<h1>AngularJS Example 1</h1>
+
+	<div class="list">
+		<ul ng-repeat="user in users">
+			<li>
+				<user user-attr="user" index-attr="{{$index}}">
+			</li>
+		</ul>
+	</div>
+
+	<div class="form">
+		<h2>Change age:</h2>
+
+		<select ng-model="currentUser" ng-options="u.name for u in users" ng-change="selectUser($event)">
+			<option value="">--select--</option>
+		</select>
+
+		<p>Name: <input type="text" ng-model="currentUser.name"></p>
+		<p>Age: <input type="text" ng-model="currentUser.age"></p>
+	</div>
+
+  <script src="../../lib/AngularJS/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+
+</body>
+</html>

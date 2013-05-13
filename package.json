@@ -1,0 +1,35 @@
+{
+  "name": "PROJECT_NAME",
+  "description": "",
+  "version": "",
+  "author": "\"dreame4\" Adam Babik (http://www.jsness.com/)",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dreame4/PROJECT_NAME.git"
+  },
+  "bugs": {
+    "url": "http://github.com/dreame4/PROJECT_NAME/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/dreame4/PROJECT_NAME/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.3"
+  }
+}
